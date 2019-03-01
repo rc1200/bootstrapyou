@@ -1,0 +1,1 @@
+web: gunicorn bootstrapyou.wsgi —-log-file -
