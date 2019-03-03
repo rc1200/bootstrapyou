@@ -42,6 +42,9 @@ INSTALLED_APPS = [
     'whitenoise.runserver_nostatic',
     'django.contrib.staticfiles',
     'myprofile',
+    'jquery',
+    'django_static_jquery',
+
 ]
 
 MIDDLEWARE = [

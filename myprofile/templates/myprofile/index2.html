@@ -1,0 +1,56 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <script src="{% static 'myprofile/bower_components/jquery/dist/jquery.min.js' %}" charset="utf-8"></script>
+    <link href="{% static 'myprofile/bower_components/jqcloud2/dist/jqcloud.min.css' %}" rel="stylesheet">
+
+
+    <script src="{% static 'myprofile/assets/scripts/app.js' %}" charset="utf-8"></script>
+    <script src="{% static 'myprofile/scripts/ron.js' %}" charset="utf-8"></script>
+</head>
+
+<body>
+
+
+<section id="teaching">
+    <h2 class="text-center">Teaching</h2>
+    <div class="row">
+        <div class="small-12 medium-8 medium-offset-2">
+            <p class="text-center tag-line">In the last couple of years, I've taught programming to hundreds of
+                students both privately in person and remotely. Here are some of the domains I've helped students
+                with...</p>
+        </div>
+    </div>
+
+    <div class="cta text-center">
+
+        <button class="my-button cta-button expand form-button" onclick="myFunction()">Test JaveScript</button>
+        <button class="my-button cta-button expand form-button" id="btn1">Append text</button>
+        <button class="my-button cta-button expand form-button" id="btn2">Append list items</button>
+    </div>
+
+    <div class="row">
+        <div class="small-12 medium-8 medium-offset-2 columns">
+            <div class="teaching-domains">
+                <ul id="myList">
+                    <li>Coffee</li>
+                    <li>Tea</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<div id="demo" style="width: 550px; height: 350px; position: relative;"></div>
+
+
+<div id="jqcloud" class="jqcloud"></div>
+
+
+</body>
+
+</html>

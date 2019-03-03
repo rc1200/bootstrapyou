@@ -1,3 +1,4 @@
+
 const Portfolio = function() {
 	function makeWords() {
 		var words = [
@@ -29,6 +30,7 @@ const Portfolio = function() {
 				text: "newText",
 				weight: 7
 			}
+
 		];
 		return words;
 	}
@@ -82,3 +84,5 @@ const Portfolio = function() {
 
 Portfolio.displayWordCloud();
 Portfolio.typeAnimation();
+
+
