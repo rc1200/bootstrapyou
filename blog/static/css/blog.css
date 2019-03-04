@@ -1,0 +1,88 @@
+.container-blog-header {
+    display: flex;
+    color: white;
+    font-size: 20pt;
+    background-color: #ff9400;
+    text-align: right;
+}
+
+
+.page-header-title {
+    flex-basis: 60%;
+    text-decoration: none;
+    text-align: left;
+}
+
+.page-header-title h1 a{
+    color: #ffffff;
+    text-decoration: none;
+    text-align: left;
+}
+
+.actions, .user-name {
+    flex-basis: 40%;
+}
+
+
+
+.page-header {
+    color: white;
+    font-size: 20pt;
+    background-color: #ff9400;
+}
+
+
+.page-header h1, .page-header h1 a {
+    color: #ffffff;
+    font-size: 36pt;
+    text-decoration: none;
+    text-align: left;
+
+}
+
+
+.content  {
+    margin-left: 40px;
+}
+
+
+h1, h2, h3, h4 {
+    font-family: 'Tangerine', 'Inconsolata', 'Drpod Sans', serif;
+    font-size: 48px;
+}
+
+.date {
+    color: #aec4e5
+}
+
+.post {
+    margin-bottom: 70px;
+}
+
+.post h1 {
+    color: green;
+}
+
+.post-form-blog textarea {
+    width:100%;
+}
+
+.post-form-blog .btn-primary {
+    float: right;
+}
+
+.top-menu i{
+    color: #ffffff;
+    /*float: right;*/
+    margin: 5px;
+}
+
+.edit-publish a i {
+  color: purple;
+  padding-left: 30px;
+}
+
+.comment {
+    margin: 20x 0x 20x 20x;
+}
+

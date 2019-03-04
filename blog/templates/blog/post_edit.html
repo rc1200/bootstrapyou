@@ -1,0 +1,18 @@
+{% extends 'blog/base.html' %}
+
+{% block content%}
+
+{{ form.media }}
+
+    <h1>Edit Post</h1>
+    <div class="row form-error">
+        <div class="column" id="content">
+            <form  method="post" action='' enctype="multipart/form-data">
+                {% csrf_token %}
+                {{ form.as_p  }}
+                <button type="submit" class="btn btn-primary">SAVE</button>
+            </form>
+        </div>
+    </div>
+
+{% endblock %}

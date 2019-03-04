@@ -1,0 +1,95 @@
+{% extends 'blog/base.html' %}
+{% load markdownify %}
+
+{% block content %}
+
+<div class="post">
+
+    <span class="edit-publish">
+        {% if 'delete_post' in permissions %}
+            <a href="{% url 'post_delete' pk=post.pk %}"
+               onclick="return confirm('Are you sure you want delete this blog post?')"
+               data-toggle="tooltip" data-placement="bottom" title="Delete Blog Post!">
+                <i class="fas fa-trash-alt fa-2x"></i></a>
+        {% endif %}
+        {% if 'change_post' in permissions %}
+            <a href="{% url 'post_edit' pk=post.pk %}" data-toggle="tooltip" data-placement="bottom" title="Edit Blog Post!">
+                <i class="fas fa-edit fa-2x"></i></a>
+            {% if post.published_date %}
+                <a href="{% url 'post_post_unPublish' pk=post.pk %}"><button
+                        class="btn btn-secondary">Un-Publish</button></a>
+            {% else %}
+                <a href="{% url 'post_publish' pk=post.pk %}"><button class="btn btn-secondary">Publish</button></a>
+            {% endif %}
+        {% endif %}
+    </span>
+
+
+    <div class="date">Published: {{ post.published_date}}</div>
+    <h1>{{ post.title}}</h1>
+    <p>{{ post.content | safe | linebreaksbr }}</p>
+
+
+    <hr color="orange">
+    <a href="{% url 'add_comment_to_post' pk=post.pk %}" class="btn btn-secondary" %} style="margin: 0px 0px 30px">Add comment</a>
+
+    {% for comment in comments_filtered %}
+
+    {% if user.is_authenticated %}
+    <div>
+
+        {% if comment.author == user.username or 'change_comment' in permissions%}
+        <a href="{% url 'comment_edit'  pk=comment.id %}"  data-toggle="tooltip" data-placement="bottom" title="Edit comment!"><i class="fas fa-edit fa-2x"></i></a>
+
+
+        {% endif %}
+
+        {% if 'change_comment' in permissions %}
+        {% if comment.approved == False %}
+        <a href="{% url 'comment_publish'  pk=comment.id %}" class="btn btn-info" }>Publish</a>
+        {% else %}
+        <a href="{% url 'comment_publish'  pk=comment.id %}" class="btn btn-secondary" }>Un-Publish</a>
+        {% endif %}
+
+        (
+        post.id={{ post.id }}
+        comment.id={{ comment.id }}
+        comment.post_id={{ comment.post_id }}
+        comment.publish={{ comment.publish }}
+        {{post.pk}}
+        )
+
+        {% endif %}
+
+
+        {% if comment.approved == False %}
+        <p style="color: red">Post has not been approved by admin.</p>
+        {% endif %}
+
+
+    </div>
+
+    {% endif %}
+
+
+    <div class="comment">
+        <div class="date">
+            {{ comment.crated_date }}
+        </div>
+        <p>Author: <strong>{{ comment.author }}</strong></p>
+        <p>{{ comment.content| safe }}</p>
+        <hr>
+
+    </div>
+
+    {% empty %}
+    <p>No comments yet...</p>
+
+    {% endfor %}
+
+</div>
+
+
+{% endblock %}
+
+
