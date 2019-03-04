@@ -3,31 +3,49 @@ const Portfolio = function() {
 	function makeWords() {
 		var words = [
 			{
-				text: "rapping",
+				text: "API",
 				weight: 12.3
 			}, {
 				text: "css3",
 				weight: 8
 			}, {
 				text: "javascript",
-				weight: 14
+				weight: 5
 			}, {
 				text: "jquery",
-				weight: 3
+				weight: 4
 			}, {
 				text: "programming",
 				weight: 7
 			}, {
-				text: "python",
-				weight: 10
-			}, {
-				text: "java",
-				weight: 9
-			}, {
-				text: "qazi",
+				text: "Python",
 				weight: 15
 			}, {
-				text: "newText",
+				text: "Excel",
+				weight: 9
+			}, {
+				text: "VBA",
+				weight: 15
+			}, {
+				text: "SQL",
+				weight: 7
+			}, {
+				text: "Django",
+				weight: 15
+			}, {
+				text: "Pandas",
+				weight: 7
+			}, {
+				text: "Selenium",
+				weight: 10
+			}, {
+				text: "Automation",
+				weight: 7
+			}, {
+				text: "Trading",
+				weight: 15
+			}, {
+				text: "Regex",
 				weight: 7
 			}
 
@@ -36,14 +54,14 @@ const Portfolio = function() {
 	}
 
 	function makeWordCloud(words) {
-		$('.teaching-domains').jQCloud(words, {delay: 120});
+		$('.teaching-domains').jQCloud(words, {delay: 550});
 	}
 
 	function displayWordCloud() {
 		var count = 1;
 		$(window).on('scroll', function() {
 			var y_scroll_pos = window.pageYOffset;
-			var scroll_pos_test = 2700; // set to whatever you want it to be
+			var scroll_pos_test = 1000; // set to whatever you want it to be
 			var words = makeWords();
 			if (y_scroll_pos > scroll_pos_test && count <= 1) {
 				makeWordCloud(words);
@@ -59,7 +77,7 @@ const Portfolio = function() {
 	function typeAnimation() {
 		Typed.new("#writing-text", {
 			strings: [
-				"am a Full-Stack Web Developer.", "love everything about code.", "also teach programming to people.", "solve problems."
+				"am a Full-Stack Web Developer.", "solve problems with code", "streamline daily task.", "also teach programming to people.", "can help YOU!"
 			],
 			// Optionally use an HTML element to grab strings from (must wrap each string in a <p>)
 			stringsElement: null,
