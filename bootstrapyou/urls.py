@@ -28,5 +28,7 @@ urlpatterns = [
     # since this is the man, we are asking to look at the blog.urls.py file instead so we include it here
     path('', include('blog.urls')),
 
+    # Fun with JavaScript App paths
+    path('', include('funWithJavaScript.urls')),
 
 ]

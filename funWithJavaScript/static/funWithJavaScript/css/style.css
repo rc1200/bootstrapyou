@@ -1,0 +1,118 @@
+
+
+.container-1, .container-2, .container-3, .container-4 {
+	border: 3px solid Red;
+	margin: 0 auto;
+	width: 75%;
+	text-align: center;
+}
+
+.flex-box-container-1 {
+	border: 2px solid black;
+	display: flex;
+	padding: 30px;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	flex-direction: row;
+}
+
+.flex-box-container-1 div {
+	border: 10px solid green;
+	/*display: flex*/
+	/*padding: 10;*/
+}
+
+
+
+/*--------------------------------------------------------------*/
+
+/*see container 2 defined above*/
+.flex-box-container-2, .flex-box-pick-color, .flex-blackjack-row-1,
+.flex-blackjack-row-2, .flex-blackjack-row-3 {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	border: 2px solid purple;
+	flex-direction: row; /*default is row*/
+}
+
+.flex-box-container-2 div {
+	border: 5px solid green;
+}
+
+.flex-box-container-2 img {
+	border: 3px solid yellow;
+	margin: 10px;
+	box-shadow: 0px 10px 50px rgba(0,0,0, 0.7);
+	max-width: 300px;
+}
+
+
+/*--------------------------------------------------------------*/
+
+.flex-box-rps {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	border: 3px solid purple;
+}
+
+/*.flex-box-container-3 img {*/
+.flex-box-rps img {
+	max-height: 140px;
+	min-height: 140px;
+	max-width: 140px;	
+}
+
+.flex-box-rps img:hover {
+
+	-webkit-filter: drop-shadow(5px 5px 5px rgb(0, 0, 0) );
+	filter: drop-shadow(5px 5px 5px rgb(0, 0, 0)); filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=12, OffY=12, Color='#444')"; 
+	/*box-shadow: 0px 10px 50px rgba(37,14,223,7)*/
+}
+
+/*.rpsresults {
+	box-shadow: 0px 10px 50px rgba(37,50,223,1)
+}*/
+
+.container-5 {
+	margin: 0 auto;
+	width: 75%;
+	text-align: center;
+}
+
+.flex-blackjack-row-1, .flex-blackjack-row-2 {
+	background: url(../images/blackJack/black_Jack_Table.jpg) no-repeat center;
+	color : white;
+}
+
+.flex-blackjack-row-1 div {
+	border: 1px solid black;
+	padding: 10px;
+	height: 350px;
+	flex: 1; /*Give both equal priority in spacing*/
+	text-align: center;
+}
+
+.flex-blackjack-row-1 img {
+	width: 25%; /*to make cards fit*/
+	padding: 10px;
+}
+
+.flex-blackjack-row-2 button {
+	border: 3px solid red;
+	padding: 10px;
+}
+
+.flex-blackjack-row-2 div {
+	border: 3px solid black;
+	padding: 10px;
+}
+
+table, th, td {
+	padding: 5px;
+	border: 1px solid black;
+
+}
+
+
