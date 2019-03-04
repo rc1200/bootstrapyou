@@ -2,18 +2,21 @@
 <!DOCTYPE html>
 <html>
 
-<head>
-    <meta charset="UTF-8">
-    <script src="{% static 'myprofile/bower_components/jquery/dist/jquery.min.js' %}" charset="utf-8"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqcloud/1.0.4/jqcloud.css">
-    <script src="{% static 'myprofile/scripts/ron.js' %}" charset="utf-8"></script>
-
-</head>
-
+<script src="{% static 'myprofile/assets/scripts/demo_workers.js' %}" charset="utf-8"></script>
+<script src="{% static 'myprofile/assets/scripts/def_workers.js' %}" charset="utf-8"></script>
 
 <body>
 
-<div id="jqcloud" class="jqcloud"></div>
-</body>
+<p>Count numbers: <output id="result"></output></p>
+<button onclick="startWorker()">Start Worker</button>
+<button onclick="stopWorker()">Stop Worker</button>
+<button onclick="test()">test</button>
 
+<p><strong>Note:</strong> Internet Explorer 9 and earlier versions do not support Web Workers.</p>
+
+<script>
+
+</script>
+
+</body>
 </html>

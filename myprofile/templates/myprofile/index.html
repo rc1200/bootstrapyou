@@ -28,11 +28,25 @@
     <script src="{% static 'myprofile/bower_components/jqcloud2/dist/jqcloud.min.js' %}" charset="utf-8"></script>
     <link rel="stylesheet" href="{% static 'myprofile/bower_components/jqcloud2/dist/jqcloud.min.css' %}">
 
-    <script src="{% static 'myprofile/bower_components/foundation-sites/dist/js/foundation.min.js' %}" charset="utf-8"></script>
+    <script src="{% static 'myprofile/bower_components/foundation-sites/dist/js/foundation.min.js' %}"
+            charset="utf-8"></script>
 
 </head>
 
 <body>
+
+<script type="text/javascript" src="{% static 'myprofile/assets/scripts/demo_workers.js' %}" charset="utf-8"></script>
+
+<p>Count numbers: <output id="result"></output></p>
+<button onclick="startWorker()">Start Worker</button>
+<button onclick="stopWorker()">Stop Worker</button>
+
+
+
+
+
+
+
 <div class="wrapper">
     <div class="thin-bar">
     </div>
@@ -43,14 +57,14 @@
                 <img class="img-circle" src="{% static 'myprofile/assets/images/adhoc-profile-pic.png' %}"
                      alt="headshot">
                 <div class="details">
-                    <h2>Hi, I'm Tenzin. I...<br> <span id="writing-text"><span></h2>
+                    <h2>Hi, I'm Ron. I...<br> <span id="writing-text"><span></h2>
                 </div>
             </div>
         </div>
         <div class="row">
             <div class="small-12 column">
                 <div class="cta text-center">
-                    <a class="my-button cta-button expand form-button" href="mailto:tenzinphuljung7@gmail.com">Get In
+                    <a class="my-button cta-button expand form-button" href="mailto:ron.calibuso@gmail.com">Get In
                         Touch</a>
                 </div>
             </div>
@@ -174,7 +188,12 @@
 
     </section>
 
+
     <section id="teaching">
+
+
+
+
         <h2 class="text-center">Teaching</h2>
         <div class="row">
             <div class="small-12 medium-8 medium-offset-2">
@@ -182,11 +201,6 @@
                     students both privately in person and remotely. Here are some of the domains I've helped students
                     with...</p>
             </div>
-        </div>
-
-        <div class="cta text-center">
-
-            <button class="my-button cta-button expand form-button" onclick="myFunction()">Test JaveScript</button>
         </div>
 
         <div class="row">
@@ -222,6 +236,8 @@
 
 </div>
 <script type="text/javascript" src="{% static 'myprofile/assets/scripts/app.js' %}" charset="utf-8"></script>
+
+
 </body>
 
 </html>
