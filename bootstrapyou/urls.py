@@ -31,4 +31,7 @@ urlpatterns = [
     # Fun with JavaScript App paths
     path('', include('funWithJavaScript.urls')),
 
+    # Movie APP
+    path('', include('movies.urls')),
+
 ]
