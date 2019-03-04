@@ -9,4 +9,4 @@ def index2(request):
     return render(request, "myprofile/index2.html")
 
 def index3(request):
-    return render(request, "myprofile/index3.html")
+    return render(request, "myprofile/index3.html",  {'range5': range(5)})

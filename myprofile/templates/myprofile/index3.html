@@ -14,9 +14,14 @@
 
 <p><strong>Note:</strong> Internet Explorer 9 and earlier versions do not support Web Workers.</p>
 
-<script>
 
-</script>
+{% for i in  range5 %}
+    <div class="tab-content">
+    <h1 class="tab" title="title for page {{i}}">Page {{i}}</h1>
+    <p>This is the content of tab {{i}} on container {{i}}</p>
+        test()
+    </div>
+{% endfor %}
 
 </body>
 </html>
